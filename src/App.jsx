@@ -31,12 +31,16 @@ const App = () => {
     setTodoItems(newTodoItem);
   };
 
+  const handleDeleteItem = (todoitemName) => {
+    console.log(`item deleted${todoitemName}`);
+  };
+
   return (
     <center className="todo-Container">
       <Appname />
       <AddTodo onNewItem={handleNewItem} />
-      <WelcomeMessge />
-      <TodoItems todoItems={todoItems} />
+      {todoItems.length === 0 && <WelcomeMessge />}
+      <TodoItems todoItems={todoItems} onDeleteClick={handleDeleteItem} />
     </center>
   );
 };
