@@ -5,22 +5,7 @@ import TodoItems from "./component/TodoItems";
 import WelcomeMessge from "./component/WelcomeMessge";
 
 const App = () => {
-  const initialTodoItems = [
-    {
-      name: "Buy Milk",
-      dueDate: "29/05/25",
-    },
-    {
-      name: "Go to College",
-      dueDate: "29/05/25",
-    },
-    {
-      name: "Buy Milk",
-      dueDate: "20/06/25",
-    },
-  ];
-
-  const [todoItems, setTodoItems] = useState(initialTodoItems);
+  const [todoItems, setTodoItems] = useState([]);
 
   const handleNewItem = (itemName, itemDueDate) => {
     console.log(`New item added: ${itemName}, due on ${itemDueDate}`);

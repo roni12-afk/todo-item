@@ -10,7 +10,7 @@ const TodoItem = ({ todoName, todoDate, onDeleteClick }) => {
           <button
             type="button"
             class="btn btn-danger"
-            onClick={() => onDeleteClick}
+            onClick={() => onDeleteClick(todoName)}
           >
             Delete
           </button>
