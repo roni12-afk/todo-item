@@ -1,31 +1,23 @@
-import React, { useState } from "react";
-import AddTodo from "./component/AddTodo";
+import React from "react";
 import Appname from "./component/Appname";
-import TodoItems from "./component/TodoItems";
-import WelcomeMessge from "./component/WelcomeMessge";
+import AddTodo from "./component/AddTodo";
 
 const App = () => {
-  const [todoItems, setTodoItems] = useState([]);
-
-  const handleNewItem = (itemName, itemDueDate) => {
-    console.log(`New item added: ${itemName}, due on ${itemDueDate}`);
-    const newTodoItem = [
-      ...todoItems,
-      { name: itemName, dueDate: itemDueDate },
-    ];
-    setTodoItems(newTodoItem);
-  };
-
-  const handleDeleteItem = (todoitemName) => {
-    console.log(`item deleted${todoitemName}`);
-  };
-
   return (
-    <center className="todo-Container">
+    <center>
       <Appname />
-      <AddTodo onNewItem={handleNewItem} />
-      {todoItems.length === 0 && <WelcomeMessge />}
-      <TodoItems todoItems={todoItems} onDeleteClick={handleDeleteItem} />
+      <AddTodo />
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-4">Buy milk</div>
+          <div class="col-4">20.12.25</div>
+          <div class="col-2">
+            <button type="button" class="btn btn-danger">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
     </center>
   );
 };

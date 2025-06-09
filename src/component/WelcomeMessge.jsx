@@ -1,8 +1,7 @@
-const WelcomeMessage = () => {
-  return (
-    <div>
-      <h5>Enter You'r todo</h5>
-    </div>
-  );
+import React from "react";
+
+const WelcomeMessge = () => {
+  return <div>WelcomeMessge</div>;
 };
-export default WelcomeMessage;
+
+export default WelcomeMessge;

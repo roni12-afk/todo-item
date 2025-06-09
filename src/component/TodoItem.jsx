@@ -1,17 +1,15 @@
 import React from "react";
 
-const TodoItem = ({ todoName, todoDate, onDeleteClick }) => {
+const TodoItem = () => {
+  const todoname = "buy milk";
+  const duedate = "20.12.25";
   return (
-    <div>
+    <div class="container text-center">
       <div class="row">
-        <div class="col-4">{todoName}</div>
-        <div class="col-4">{todoDate}</div>
+        <div class="col-4">{todoname}</div>
+        <div class="col-4">{duedate}</div>
         <div class="col-2">
-          <button
-            type="button"
-            class="btn btn-danger"
-            onClick={() => onDeleteClick(todoName)}
-          >
+          <button type="button" class="btn btn-danger">
             Delete
           </button>
         </div>
